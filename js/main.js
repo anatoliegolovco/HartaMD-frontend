@@ -9,7 +9,7 @@ $(document).ready( function init(){
 			maxZoom: 18,
 			attribution: '&copy; <a href="http://hartamd.com/">HartaMD.com</a>',
 			subdomains: [1,2,3,4]
-		}).addTo(map);
+		});
 		
 		var beta = L.tileLayer('http://ots1.hartamd.com/tiles.php?z={z}&x={x}&y={y}', {
 			minZoom:0,
@@ -17,11 +17,11 @@ $(document).ready( function init(){
 			attribution: '&copy; <a href="http://hartamd.com/">HartaMD.com</a>',
 			//subdomains: [1,2,3,4]
 			tms: true
-		});
+		}).addTo(map);
 		
 		var baseLayers = {
-			"Basic": basemap,
-			"Beta": beta
+			"New": beta,
+			"Old": basemap
 		};
 
 		var overlays = {
